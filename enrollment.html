@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>受講登録管理 - 受講生管理システム</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app-container" id="app">
+    <main class="main-content" id="main-content">
+      <div class="page-content">
+        <div class="flex justify-between items-center mb-6">
+          <div>
+            <h1 class="page-title">受講登録管理</h1>
+            <p class="page-description" style="margin-bottom: 0;">受講生と講座の紐付け管理</p>
+          </div>
+          <div>
+            <button class="btn btn-primary" onclick="alert('受講登録モーダルを開きます')">
+              <i class="fas fa-link"></i> 新規受講登録
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6 mb-6">
+          <div class="col-span-1" style="grid-column: span 1;">
+            <div class="card h-full">
+              <div class="card-header">
+                <h2 class="card-title">講座で絞り込み</h2>
+              </div>
+              <div class="card-body">
+                <ul class="nav-list">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link active">すべての講座</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Web開発マスターコース <span class="badge badge-primary ml-auto" style="margin-left: auto;">42</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Pythonデータサイエンス <span class="badge badge-primary ml-auto" style="margin-left: auto;">28</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">UI/UXデザイン実践 <span class="badge badge-primary ml-auto" style="margin-left: auto;">0</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-span-2" style="grid-column: span 2;">
+            <div class="card">
+              <div class="card-header flex justify-between items-center">
+                <h2 class="card-title">受講登録一覧</h2>
+                <div class="flex space-x-2">
+                  <input type="text" class="form-control" placeholder="受講生を検索..." style="width: 200px; padding: 0.25rem 0.5rem; height: 32px;">
+                  <button class="btn btn-secondary btn-sm"><i class="fas fa-filter"></i> 絞り込み</button>
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>受講生</th>
+                      <th>登録コース</th>
+                      <th>登録日</th>
+                      <th>ステータス</th>
+                      <th>操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="flex items-center">
+                          <div class="avatar" style="width: 28px; height: 28px; font-size: 0.7rem; margin-right: 0.5rem; background-color: #3b82f6;">山</div>
+                          山田 太郎
+                        </div>
+                      </td>
+                      <td>Web開発マスターコース</td>
+                      <td>2024/04/01</td>
+                      <td><span class="badge badge-success">受講中</span></td>
+                      <td>
+                        <button class="btn btn-icon btn-danger btn-sm" title="登録解除"><i class="fas fa-unlink"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flex items-center">
+                          <div class="avatar" style="width: 28px; height: 28px; font-size: 0.7rem; margin-right: 0.5rem; background-color: #10b981;">鈴</div>
+                          鈴木 一郎
+                        </div>
+                      </td>
+                      <td>Web開発マスターコース</td>
+                      <td>2024/04/05</td>
+                      <td><span class="badge badge-success">受講中</span></td>
+                      <td>
+                        <button class="btn btn-icon btn-danger btn-sm" title="登録解除"><i class="fas fa-unlink"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flex items-center">
+                          <div class="avatar" style="width: 28px; height: 28px; font-size: 0.7rem; margin-right: 0.5rem; background-color: #ec4899;">佐</div>
+                          佐藤 花子
+                        </div>
+                      </td>
+                      <td>Pythonデータサイエンス</td>
+                      <td>2024/04/10</td>
+                      <td><span class="badge badge-success">受講中</span></td>
+                      <td>
+                        <button class="btn btn-icon btn-danger btn-sm" title="登録解除"><i class="fas fa-unlink"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flex items-center">
+                          <div class="avatar" style="width: 28px; height: 28px; font-size: 0.7rem; margin-right: 0.5rem; background-color: #f59e0b;">高</div>
+                          高橋 健太
+                        </div>
+                      </td>
+                      <td>Web開発マスターコース</td>
+                      <td>2024/04/15</td>
+                      <td><span class="badge badge-warning">手続き中</span></td>
+                      <td>
+                        <button class="btn btn-icon btn-danger btn-sm" title="登録解除"><i class="fas fa-unlink"></i></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-body border-t" style="border-top: 1px solid var(--border);">
+                <div class="flex justify-between items-center">
+                  <span class="text-muted">全 70 件中 1-4 件を表示</span>
+                  <div class="flex space-x-2">
+                    <button class="btn btn-secondary btn-sm" disabled>前へ</button>
+                    <button class="btn btn-secondary btn-sm">次へ</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

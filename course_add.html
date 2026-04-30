@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新規講座登録 - 受講生管理システム</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app-container" id="app">
+    <main class="main-content" id="main-content">
+      <div class="page-content">
+        <div class="mb-4">
+          <a href="course_list.html" class="text-muted"><i class="fas fa-arrow-left"></i> 講座一覧に戻る</a>
+        </div>
+        
+        <h1 class="page-title mb-6">新規講座登録</h1>
+
+        <div class="card" style="max-width: 800px;">
+          <div class="card-body">
+            <form action="course_list.html">
+              <div class="form-group">
+                <label class="form-label">講座名 <span class="text-danger" style="color: var(--danger);">*</span></label>
+                <input type="text" class="form-control" required placeholder="例: Web開発マスターコース">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">概要説明 <span class="text-danger" style="color: var(--danger);">*</span></label>
+                <textarea class="form-control" required placeholder="講座の目的や学ぶ内容を記入してください" rows="4"></textarea>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div class="form-group">
+                  <label class="form-label">担当講師 <span class="text-danger" style="color: var(--danger);">*</span></label>
+                  <select class="form-control" required>
+                    <option value="">選択してください</option>
+                    <option value="1">田中 健太</option>
+                    <option value="2">佐藤 花子</option>
+                    <option value="3">高橋 一郎</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">ステータス <span class="text-danger" style="color: var(--danger);">*</span></label>
+                  <select class="form-control" required>
+                    <option value="draft">準備中</option>
+                    <option value="active">開講中</option>
+                    <option value="closed">募集終了</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div class="form-group">
+                  <label class="form-label">開始日 <span class="text-danger" style="color: var(--danger);">*</span></label>
+                  <input type="date" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">終了予定日 <span class="text-danger" style="color: var(--danger);">*</span></label>
+                  <input type="date" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div class="form-group">
+                  <label class="form-label">定員数</label>
+                  <input type="number" class="form-control" placeholder="例: 30" min="1">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">受講料（税込）</label>
+                  <input type="number" class="form-control" placeholder="例: 150000" min="0">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">スケジュール・曜日</label>
+                <input type="text" class="form-control" placeholder="例: 毎週火曜・木曜 19:00〜21:00">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">カリキュラム詳細</label>
+                <textarea class="form-control" placeholder="各回の内容などを記入してください" rows="6"></textarea>
+              </div>
+
+              <div class="mt-6 pt-4 border-t flex justify-end space-x-2" style="border-top: 1px solid var(--border);">
+                <button type="button" class="btn btn-secondary" onclick="history.back()">キャンセル</button>
+                <button type="submit" class="btn btn-primary">登録する</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

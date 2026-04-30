@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>成績管理 - 受講生管理システム</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app-container" id="app">
+    <main class="main-content" id="main-content">
+      <div class="page-content">
+        <div class="flex justify-between items-center mb-6">
+          <div>
+            <h1 class="page-title">成績・評価管理</h1>
+            <p class="page-description" style="margin-bottom: 0;">課題やテストの成績管理</p>
+          </div>
+        </div>
+
+        <div class="card mb-6">
+          <div class="card-body">
+            <div class="grid grid-cols-4 gap-4">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label">対象講座</label>
+                <select class="form-control">
+                  <option value="1">Web開発マスターコース</option>
+                  <option value="2">Pythonデータサイエンス</option>
+                </select>
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label">対象課題・テスト</label>
+                <select class="form-control">
+                  <option value="1">中間課題: React Component作成</option>
+                  <option value="2">小テスト: JavaScript基礎</option>
+                  <option value="3">最終課題: ポートフォリオサイト作成</option>
+                </select>
+              </div>
+              <div class="flex items-end mb-0">
+                <button class="btn btn-secondary w-full"><i class="fas fa-search"></i> 表示</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header flex justify-between items-center">
+            <h2 class="card-title">中間課題: React Component作成 (満点: 100)</h2>
+            <div>
+              <button class="btn btn-secondary" style="margin-right: 0.5rem;"><i class="fas fa-file-export"></i> CSV出力</button>
+              <button class="btn btn-primary"><i class="fas fa-save"></i> 保存</button>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>受講生名</th>
+                  <th>提出状況</th>
+                  <th>点数</th>
+                  <th>評価</th>
+                  <th>フィードバック（受講生に表示されます）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="flex items-center">
+                      <div class="avatar" style="width: 32px; height: 32px; font-size: 0.8rem; margin-right: 0.75rem; background-color: #3b82f6;">山</div>
+                      山田 太郎
+                    </div>
+                  </td>
+                  <td><span class="badge badge-success">提出済</span> <span class="text-muted" style="font-size: 0.75rem;">(5/20)</span></td>
+                  <td>
+                    <input type="number" class="form-control" value="92" min="0" max="100" style="width: 80px;">
+                  </td>
+                  <td><span style="color: var(--success); font-weight: bold; font-size: 1.125rem;">A</span></td>
+                  <td>
+                    <input type="text" class="form-control" value="コンポーネントの分割が適切で、状態管理も問題ありません。">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="flex items-center">
+                      <div class="avatar" style="width: 32px; height: 32px; font-size: 0.8rem; margin-right: 0.75rem; background-color: #10b981;">鈴</div>
+                      鈴木 一郎
+                    </div>
+                  </td>
+                  <td><span class="badge badge-success">提出済</span> <span class="text-muted" style="font-size: 0.75rem;">(5/21)</span></td>
+                  <td>
+                    <input type="number" class="form-control" value="85" min="0" max="100" style="width: 80px;">
+                  </td>
+                  <td><span style="color: var(--success); font-weight: bold; font-size: 1.125rem;">A</span></td>
+                  <td>
+                    <input type="text" class="form-control" value="要件は満たしていますが、CSSの命名規則にもう少し統一感を持たせましょう。">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="flex items-center">
+                      <div class="avatar" style="width: 32px; height: 32px; font-size: 0.8rem; margin-right: 0.75rem; background-color: #ec4899;">田</div>
+                      田中 美咲
+                    </div>
+                  </td>
+                  <td><span class="badge badge-success">提出済</span> <span class="text-muted" style="font-size: 0.75rem;">(5/21)</span></td>
+                  <td>
+                    <input type="number" class="form-control" value="70" min="0" max="100" style="width: 80px;">
+                  </td>
+                  <td><span style="color: var(--warning); font-weight: bold; font-size: 1.125rem;">B</span></td>
+                  <td>
+                    <input type="text" class="form-control" value="動作はしていますが、Hooksの使い方が一部不適切です。再提出を推奨します。">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="flex items-center">
+                      <div class="avatar" style="width: 32px; height: 32px; font-size: 0.8rem; margin-right: 0.75rem; background-color: #f59e0b;">高</div>
+                      高橋 健太
+                    </div>
+                  </td>
+                  <td><span class="badge badge-danger">未提出</span></td>
+                  <td>
+                    <input type="number" class="form-control" min="0" max="100" style="width: 80px;" disabled>
+                  </td>
+                  <td>-</td>
+                  <td>
+                    <input type="text" class="form-control" disabled>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>講師詳細 - 受講生管理システム</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app-container" id="app">
+    <main class="main-content" id="main-content">
+      <div class="page-content">
+        <div class="mb-4">
+          <a href="instructor_list.html" class="text-muted"><i class="fas fa-arrow-left"></i> 講師一覧に戻る</a>
+        </div>
+        
+        <div class="flex justify-between items-center mb-6">
+          <div class="flex items-center">
+            <div class="avatar" style="width: 64px; height: 64px; font-size: 1.5rem; margin-right: 1.5rem; background-color: #f59e0b;">田</div>
+            <div>
+              <h1 class="page-title" style="display: flex; align-items: center; gap: 1rem;">
+                田中 健太
+                <span class="badge badge-success" style="font-size: 0.875rem;">稼働中</span>
+              </h1>
+              <p class="page-description" style="margin-bottom: 0;">Webエンジニア</p>
+            </div>
+          </div>
+          <div>
+            <button class="btn btn-secondary" onclick="location.href='instructor_edit.html'">
+              <i class="fas fa-edit"></i> 編集
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6">
+          <div class="col-span-1" style="grid-column: span 1;">
+            <div class="card mb-6">
+              <div class="card-header">
+                <h2 class="card-title">基本情報</h2>
+              </div>
+              <div class="card-body">
+                <div style="margin-bottom: 1rem;">
+                  <div class="text-muted" style="font-size: 0.75rem; margin-bottom: 0.25rem;">メールアドレス</div>
+                  <div><a href="mailto:kenta.tanaka@example.com">kenta.tanaka@example.com</a></div>
+                </div>
+                <div style="margin-bottom: 1rem;">
+                  <div class="text-muted" style="font-size: 0.75rem; margin-bottom: 0.25rem;">電話番号</div>
+                  <div>090-9876-5432</div>
+                </div>
+                <div style="margin-bottom: 1rem;">
+                  <div class="text-muted" style="font-size: 0.75rem; margin-bottom: 0.25rem;">専門分野・スキル</div>
+                  <div class="flex flex-wrap gap-2 mt-2">
+                    <span class="badge" style="background-color: #f3f4f6; color: #4b5563;">JavaScript</span>
+                    <span class="badge" style="background-color: #f3f4f6; color: #4b5563;">React</span>
+                    <span class="badge" style="background-color: #f3f4f6; color: #4b5563;">Node.js</span>
+                    <span class="badge" style="background-color: #f3f4f6; color: #4b5563;">TypeScript</span>
+                  </div>
+                </div>
+                <div style="margin-bottom: 1rem;">
+                  <div class="text-muted" style="font-size: 0.75rem; margin-bottom: 0.25rem;">プロフィール</div>
+                  <p style="font-size: 0.875rem;">現役のフロントエンドエンジニア。実務に即した実践的なコーディング指導が得意。初心者にも分かりやすい丁寧な解説が好評。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-span-2" style="grid-column: span 2;">
+            <div class="card mb-6">
+              <div class="card-header">
+                <h2 class="card-title">担当講座</h2>
+              </div>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>講座名</th>
+                      <th>期間</th>
+                      <th>スケジュール</th>
+                      <th>受講生数</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><a href="course_detail.html">Web開発マスターコース</a></td>
+                      <td>2024/04/01 〜 2024/09/30</td>
+                      <td>火・木 19:00</td>
+                      <td>42名</td>
+                    </tr>
+                    <tr>
+                      <td>JavaScript実践</td>
+                      <td>2024/05/15 〜 2024/07/15</td>
+                      <td>土 13:00</td>
+                      <td>18名</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h2 class="card-title">直近のスケジュール</h2>
+              </div>
+              <div class="card-body">
+                <ul style="position: relative; padding-left: 1.5rem; border-left: 2px solid var(--border);">
+                  <li style="position: relative; margin-bottom: 1.5rem;">
+                    <div style="position: absolute; left: -1.8rem; top: 0.2rem; width: 12px; height: 12px; border-radius: 50%; background: var(--primary); border: 2px solid var(--surface);"></div>
+                    <div class="text-muted" style="font-size: 0.75rem; margin-bottom: 0.25rem;">本日 19:00 - 21:00</div>
+                    <div style="font-weight: 500;">Web開発マスターコース 第9回</div>
+                  </li>
+                  <li style="position: relative; margin-bottom: 1.5rem;">
+                    <div style="position: absolute; left: -1.8rem; top: 0.2rem; width: 12px; height: 12px; border-radius: 50%; background: var(--primary); border: 2px solid var(--surface);"></div>
+                    <div class="text-muted" style="font-size: 0.75rem; margin-bottom: 0.25rem;">5/25(土) 13:00 - 15:00</div>
+                    <div style="font-weight: 500;">JavaScript実践 第2回</div>
+                  </li>
+                  <li style="position: relative;">
+                    <div style="position: absolute; left: -1.8rem; top: 0.2rem; width: 12px; height: 12px; border-radius: 50%; background: var(--primary); border: 2px solid var(--surface);"></div>
+                    <div class="text-muted" style="font-size: 0.75rem; margin-bottom: 0.25rem;">5/28(火) 19:00 - 21:00</div>
+                    <div style="font-weight: 500;">Web開発マスターコース 第10回</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

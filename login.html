@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ログイン - 受講生管理システム</title>
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="card login-card">
+      <div class="login-header">
+        <div class="login-logo">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h1 class="page-title" style="font-size: 1.5rem;">EduManage</h1>
+        <p class="text-muted">受講生管理システムにログイン</p>
+      </div>
+      
+      <form id="loginForm" onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <label class="form-label">メールアドレス</label>
+          <div style="position: relative;">
+            <i class="fas fa-envelope text-muted" style="position: absolute; left: 1rem; top: 0.8rem;"></i>
+            <input type="email" class="form-control" placeholder="admin@example.com" style="padding-left: 2.5rem;" required value="admin@example.com">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <div class="flex justify-between items-center mb-1">
+            <label class="form-label" style="margin-bottom: 0;">パスワード</label>
+            <a href="#" style="font-size: 0.75rem;">パスワードを忘れた場合</a>
+          </div>
+          <div style="position: relative;">
+            <i class="fas fa-lock text-muted" style="position: absolute; left: 1rem; top: 0.8rem;"></i>
+            <input type="password" class="form-control" placeholder="パスワードを入力" style="padding-left: 2.5rem;" required value="password">
+          </div>
+        </div>
+        
+        <div class="form-group flex items-center">
+          <input type="checkbox" id="remember" style="margin-right: 0.5rem;">
+          <label for="remember" style="font-size: 0.875rem;">ログイン状態を保持する</label>
+        </div>
+        
+        <button type="submit" class="btn btn-primary w-full" style="padding: 0.75rem;">
+          ログイン
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    function handleLogin(e) {
+      e.preventDefault();
+      // Mock login process
+      localStorage.setItem('isLoggedIn', 'true');
+      window.location.href = 'dashboard.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>受講生編集 - 受講生管理システム</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app-container" id="app">
+    <main class="main-content" id="main-content">
+      <div class="page-content">
+        <div class="mb-4">
+          <a href="student_list.html" class="text-muted"><i class="fas fa-arrow-left"></i> 受講生一覧に戻る</a>
+        </div>
+        
+        <div class="flex justify-between items-center mb-6">
+          <h1 class="page-title mb-0">受講生編集: 山田 太郎</h1>
+          <button class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> 削除</button>
+        </div>
+
+        <div class="card" style="max-width: 800px;">
+          <div class="card-body">
+            <form action="student_detail.html">
+              <h3 class="mb-4" style="border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">基本情報</h3>
+              
+              <div class="grid grid-cols-2 gap-4">
+                <div class="form-group">
+                  <label class="form-label">氏名 <span class="text-danger" style="color: var(--danger);">*</span></label>
+                  <input type="text" class="form-control" required value="山田 太郎">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">フリガナ <span class="text-danger" style="color: var(--danger);">*</span></label>
+                  <input type="text" class="form-control" required value="ヤマダ タロウ">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div class="form-group">
+                  <label class="form-label">メールアドレス <span class="text-danger" style="color: var(--danger);">*</span></label>
+                  <input type="email" class="form-control" required value="taro.yamada@example.com">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">電話番号</label>
+                  <input type="tel" class="form-control" value="090-1234-5678">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div class="form-group">
+                  <label class="form-label">生年月日</label>
+                  <input type="date" class="form-control" value="1995-04-01">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">ステータス</label>
+                  <select class="form-control">
+                    <option value="active" selected>受講中</option>
+                    <option value="pending">手続き中</option>
+                    <option value="completed">完了</option>
+                    <option value="withdrawn">退会</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">郵便番号</label>
+                <div class="flex space-x-2" style="max-width: 200px;">
+                  <input type="text" class="form-control" value="100-0001">
+                  <button type="button" class="btn btn-secondary">住所検索</button>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">住所</label>
+                <input type="text" class="form-control mb-2" value="東京都千代田区千代田1-1-1">
+                <input type="text" class="form-control" value="○○マンション 101">
+              </div>
+
+              <h3 class="mt-6 mb-4" style="border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">メモ・特記事項</h3>
+              <div class="form-group">
+                <textarea class="form-control" rows="4">真面目で学習意欲が高い。Reactに強い関心あり。</textarea>
+              </div>
+
+              <div class="mt-6 pt-4 border-t flex justify-end space-x-2" style="border-top: 1px solid var(--border);">
+                <button type="button" class="btn btn-secondary" onclick="history.back()">キャンセル</button>
+                <button type="submit" class="btn btn-primary">更新する</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

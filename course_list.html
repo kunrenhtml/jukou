@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>講座一覧 - 受講生管理システム</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app-container" id="app">
+    <main class="main-content" id="main-content">
+      <div class="page-content">
+        <div class="flex justify-between items-center mb-6">
+          <div>
+            <h1 class="page-title">講座一覧</h1>
+            <p class="page-description" style="margin-bottom: 0;">提供している講座（コース）の管理</p>
+          </div>
+          <div>
+            <button class="btn btn-primary" onclick="location.href='course_add.html'">
+              <i class="fas fa-plus"></i> 新規講座作成
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6 mb-6">
+          <!-- Course Card 1 -->
+          <div class="card">
+            <div style="height: 120px; background: linear-gradient(135deg, #4f46e5 0%, #8b5cf6 100%); position: relative;">
+              <span class="badge badge-success" style="position: absolute; top: 1rem; right: 1rem;">開講中</span>
+            </div>
+            <div class="card-body">
+              <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Web開発マスターコース</h3>
+              <p class="text-muted" style="font-size: 0.875rem; margin-bottom: 1rem; height: 40px; overflow: hidden;">フロントエンドからバックエンドまで、モダンなWeb開発の基礎を網羅的に学びます。</p>
+              
+              <div class="flex justify-between items-center text-muted" style="font-size: 0.875rem; margin-bottom: 1rem;">
+                <div><i class="fas fa-users"></i> 受講生: 42名</div>
+                <div><i class="fas fa-clock"></i> 期間: 6ヶ月</div>
+              </div>
+              
+              <div class="flex justify-between items-center pt-4" style="border-top: 1px solid var(--border);">
+                <div class="flex items-center">
+                  <div class="avatar" style="width: 24px; height: 24px; font-size: 0.6rem; margin-right: 0.5rem; background-color: #f59e0b;">田</div>
+                  <span style="font-size: 0.75rem;">田中 講師</span>
+                </div>
+                <div class="flex space-x-2">
+                  <button class="btn btn-icon btn-secondary btn-sm" onclick="location.href='course_detail.html'"><i class="fas fa-eye"></i></button>
+                  <button class="btn btn-icon btn-secondary btn-sm" onclick="location.href='course_edit.html'"><i class="fas fa-edit"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course Card 2 -->
+          <div class="card">
+            <div style="height: 120px; background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%); position: relative;">
+              <span class="badge badge-success" style="position: absolute; top: 1rem; right: 1rem;">開講中</span>
+            </div>
+            <div class="card-body">
+              <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Pythonデータサイエンス</h3>
+              <p class="text-muted" style="font-size: 0.875rem; margin-bottom: 1rem; height: 40px; overflow: hidden;">Pythonを用いたデータ分析、機械学習の基礎から実践まで。</p>
+              
+              <div class="flex justify-between items-center text-muted" style="font-size: 0.875rem; margin-bottom: 1rem;">
+                <div><i class="fas fa-users"></i> 受講生: 28名</div>
+                <div><i class="fas fa-clock"></i> 期間: 4ヶ月</div>
+              </div>
+              
+              <div class="flex justify-between items-center pt-4" style="border-top: 1px solid var(--border);">
+                <div class="flex items-center">
+                  <div class="avatar" style="width: 24px; height: 24px; font-size: 0.6rem; margin-right: 0.5rem; background-color: #ec4899;">佐</div>
+                  <span style="font-size: 0.75rem;">佐藤 講師</span>
+                </div>
+                <div class="flex space-x-2">
+                  <button class="btn btn-icon btn-secondary btn-sm" onclick="location.href='course_detail.html'"><i class="fas fa-eye"></i></button>
+                  <button class="btn btn-icon btn-secondary btn-sm" onclick="location.href='course_edit.html'"><i class="fas fa-edit"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course Card 3 -->
+          <div class="card">
+            <div style="height: 120px; background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%); position: relative;">
+              <span class="badge badge-warning" style="position: absolute; top: 1rem; right: 1rem;">準備中</span>
+            </div>
+            <div class="card-body">
+              <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">UI/UXデザイン実践</h3>
+              <p class="text-muted" style="font-size: 0.875rem; margin-bottom: 1rem; height: 40px; overflow: hidden;">Figmaを使った実践的なデザイン手法とユーザー体験の設計。</p>
+              
+              <div class="flex justify-between items-center text-muted" style="font-size: 0.875rem; margin-bottom: 1rem;">
+                <div><i class="fas fa-users"></i> 定員: 20名</div>
+                <div><i class="fas fa-clock"></i> 期間: 3ヶ月</div>
+              </div>
+              
+              <div class="flex justify-between items-center pt-4" style="border-top: 1px solid var(--border);">
+                <div class="flex items-center">
+                  <div class="avatar" style="width: 24px; height: 24px; font-size: 0.6rem; margin-right: 0.5rem; background-color: #8b5cf6;">高</div>
+                  <span style="font-size: 0.75rem;">高橋 講師</span>
+                </div>
+                <div class="flex space-x-2">
+                  <button class="btn btn-icon btn-secondary btn-sm" onclick="location.href='course_detail.html'"><i class="fas fa-eye"></i></button>
+                  <button class="btn btn-icon btn-secondary btn-sm" onclick="location.href='course_edit.html'"><i class="fas fa-edit"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

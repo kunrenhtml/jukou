@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プロフィール - 受講生管理システム</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app-container" id="app">
+    <main class="main-content" id="main-content">
+      <div class="page-content">
+        <h1 class="page-title mb-6">アカウント設定</h1>
+
+        <div class="grid grid-cols-3 gap-6">
+          <div class="col-span-1" style="grid-column: span 1;">
+            <div class="card mb-6">
+              <div class="card-body text-center">
+                <div class="avatar mx-auto mb-4" style="width: 100px; height: 100px; font-size: 2.5rem;">
+                  <img src="https://ui-avatars.com/api/?name=Admin+User&background=4f46e5&color=fff" alt="Admin User">
+                </div>
+                <h2 style="font-size: 1.25rem; font-weight: 600;">管理者 ユーザー</h2>
+                <p class="text-muted" style="margin-bottom: 1rem;">admin@example.com</p>
+                <span class="badge badge-primary">システム管理者</span>
+              </div>
+              <div class="card-body border-t" style="border-top: 1px solid var(--border);">
+                <button class="btn btn-secondary w-full mb-2">プロフィール画像を変更</button>
+                <button class="btn btn-danger w-full mt-2" style="background: transparent; border: 1px solid var(--danger); color: var(--danger);">画像を削除</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-span-2" style="grid-column: span 2;">
+            <div class="card mb-6">
+              <div class="card-header">
+                <h2 class="card-title">プロフィール情報</h2>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="grid grid-cols-2 gap-4">
+                    <div class="form-group">
+                      <label class="form-label">姓</label>
+                      <input type="text" class="form-control" value="管理者">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">名</label>
+                      <input type="text" class="form-control" value="ユーザー">
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label class="form-label">メールアドレス</label>
+                    <input type="email" class="form-control" value="admin@example.com" disabled>
+                    <small class="text-muted">※メールアドレスの変更はシステム管理者に依頼してください。</small>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">表示名設定</label>
+                    <input type="text" class="form-control" value="管理者">
+                  </div>
+
+                  <div class="mt-4 flex justify-end">
+                    <button type="button" class="btn btn-primary" onclick="alert('プロフィールを更新しました')">更新する</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h2 class="card-title">パスワード変更</h2>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="form-group">
+                    <label class="form-label">現在のパスワード</label>
+                    <input type="password" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">新しいパスワード</label>
+                    <input type="password" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">新しいパスワード（確認）</label>
+                    <input type="password" class="form-control">
+                  </div>
+                  <div class="mt-4 flex justify-end">
+                    <button type="button" class="btn btn-secondary" onclick="alert('パスワードを変更しました')">パスワードを変更</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

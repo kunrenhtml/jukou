@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新規講師登録 - 受講生管理システム</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app-container" id="app">
+    <main class="main-content" id="main-content">
+      <div class="page-content">
+        <div class="mb-4">
+          <a href="instructor_list.html" class="text-muted"><i class="fas fa-arrow-left"></i> 講師一覧に戻る</a>
+        </div>
+        
+        <h1 class="page-title mb-6">新規講師登録</h1>
+
+        <div class="card" style="max-width: 800px;">
+          <div class="card-body">
+            <form action="instructor_list.html">
+              <h3 class="mb-4" style="border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">基本情報</h3>
+              
+              <div class="grid grid-cols-2 gap-4">
+                <div class="form-group">
+                  <label class="form-label">氏名 <span class="text-danger" style="color: var(--danger);">*</span></label>
+                  <input type="text" class="form-control" required placeholder="田中 健太">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">フリガナ <span class="text-danger" style="color: var(--danger);">*</span></label>
+                  <input type="text" class="form-control" required placeholder="タナカ ケンタ">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div class="form-group">
+                  <label class="form-label">メールアドレス <span class="text-danger" style="color: var(--danger);">*</span></label>
+                  <input type="email" class="form-control" required placeholder="example@email.com">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">電話番号</label>
+                  <input type="tel" class="form-control" placeholder="090-1234-5678">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">肩書き・職種 <span class="text-danger" style="color: var(--danger);">*</span></label>
+                <input type="text" class="form-control" required placeholder="例: Webエンジニア">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">専門分野・スキル（カンマ区切り）</label>
+                <input type="text" class="form-control" placeholder="例: JavaScript, React, Node.js">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">プロフィール</label>
+                <textarea class="form-control" rows="4" placeholder="経歴や指導の特長などを記入してください"></textarea>
+              </div>
+
+              <h3 class="mt-6 mb-4" style="border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">システムアクセス設定</h3>
+              
+              <div class="grid grid-cols-2 gap-4">
+                <div class="form-group">
+                  <label class="form-label">初期パスワード <span class="text-danger" style="color: var(--danger);">*</span></label>
+                  <input type="password" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">パスワード（確認用） <span class="text-danger" style="color: var(--danger);">*</span></label>
+                  <input type="password" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t flex justify-end space-x-2" style="border-top: 1px solid var(--border);">
+                <button type="button" class="btn btn-secondary" onclick="history.back()">キャンセル</button>
+                <button type="submit" class="btn btn-primary">登録する</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

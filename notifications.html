@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お知らせ管理 - 受講生管理システム</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app-container" id="app">
+    <main class="main-content" id="main-content">
+      <div class="page-content">
+        <div class="flex justify-between items-center mb-6">
+          <div>
+            <h1 class="page-title">お知らせ管理</h1>
+            <p class="page-description" style="margin-bottom: 0;">受講生・講師へのシステム通知の作成・管理</p>
+          </div>
+          <div>
+            <button class="btn btn-primary" onclick="alert('お知らせ作成モーダルを開きます')">
+              <i class="fas fa-paper-plane"></i> 新規お知らせ作成
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header flex justify-between items-center">
+            <h2 class="card-title">配信履歴</h2>
+            <div class="flex space-x-2">
+              <select class="form-control" style="width: auto; padding: 0.25rem 0.5rem; height: 32px;">
+                <option value="">配信対象: すべて</option>
+                <option value="students">受講生のみ</option>
+                <option value="instructors">講師のみ</option>
+              </select>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>配信日時</th>
+                  <th>タイトル</th>
+                  <th>配信対象</th>
+                  <th>ステータス</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2024/05/20 10:00</td>
+                  <td>【重要】システムメンテナンスのお知らせ</td>
+                  <td>全員</td>
+                  <td><span class="badge badge-success">配信済</span></td>
+                  <td>
+                    <button class="btn btn-icon btn-secondary btn-sm"><i class="fas fa-eye"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2024/05/18 15:30</td>
+                  <td>Web開発コース休講に関するお知らせ</td>
+                  <td>Web開発コース受講生</td>
+                  <td><span class="badge badge-success">配信済</span></td>
+                  <td>
+                    <button class="btn btn-icon btn-secondary btn-sm"><i class="fas fa-eye"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2024/05/25 12:00</td>
+                  <td>夏季休業期間中の課題提出について</td>
+                  <td>全員</td>
+                  <td><span class="badge badge-warning">予約済</span></td>
+                  <td>
+                    <div class="flex space-x-2">
+                      <button class="btn btn-icon btn-secondary btn-sm"><i class="fas fa-edit"></i></button>
+                      <button class="btn btn-icon btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

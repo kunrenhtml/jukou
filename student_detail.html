@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>受講生詳細 - 受講生管理システム</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app-container" id="app">
+    <main class="main-content" id="main-content">
+      <div class="page-content">
+        <div class="mb-4">
+          <a href="student_list.html" class="text-muted"><i class="fas fa-arrow-left"></i> 受講生一覧に戻る</a>
+        </div>
+        
+        <div class="flex justify-between items-center mb-6">
+          <div class="flex items-center">
+            <div class="avatar" style="width: 64px; height: 64px; font-size: 1.5rem; margin-right: 1.5rem; background-color: #3b82f6;">山田</div>
+            <div>
+              <h1 class="page-title" style="display: flex; align-items: center; gap: 1rem;">
+                山田 太郎 
+                <span class="badge badge-success" style="font-size: 0.875rem;">受講中</span>
+              </h1>
+              <p class="page-description" style="margin-bottom: 0;">ID: ST-1001 | 登録日: 2023/10/01</p>
+            </div>
+          </div>
+          <div>
+            <button class="btn btn-secondary" onclick="location.href='student_edit.html'">
+              <i class="fas fa-edit"></i> 編集
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6">
+          <div class="col-span-1" style="grid-column: span 1;">
+            <div class="card mb-6">
+              <div class="card-header">
+                <h2 class="card-title">基本情報</h2>
+              </div>
+              <div class="card-body">
+                <div style="margin-bottom: 1rem;">
+                  <div class="text-muted" style="font-size: 0.75rem; margin-bottom: 0.25rem;">フリガナ</div>
+                  <div>ヤマダ タロウ</div>
+                </div>
+                <div style="margin-bottom: 1rem;">
+                  <div class="text-muted" style="font-size: 0.75rem; margin-bottom: 0.25rem;">メールアドレス</div>
+                  <div><a href="mailto:taro.yamada@example.com">taro.yamada@example.com</a></div>
+                </div>
+                <div style="margin-bottom: 1rem;">
+                  <div class="text-muted" style="font-size: 0.75rem; margin-bottom: 0.25rem;">電話番号</div>
+                  <div>090-1234-5678</div>
+                </div>
+                <div style="margin-bottom: 1rem;">
+                  <div class="text-muted" style="font-size: 0.75rem; margin-bottom: 0.25rem;">住所</div>
+                  <div>〒100-0001<br>東京都千代田区千代田1-1-1<br>○○マンション 101</div>
+                </div>
+                <div style="margin-bottom: 1rem;">
+                  <div class="text-muted" style="font-size: 0.75rem; margin-bottom: 0.25rem;">生年月日</div>
+                  <div>1995年4月1日 (29歳)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-span-2" style="grid-column: span 2;">
+            <div class="card mb-6">
+              <div class="card-header flex justify-between items-center">
+                <h2 class="card-title">受講コース</h2>
+                <button class="btn btn-secondary btn-sm" onclick="location.href='enrollment.html'">受講登録</button>
+              </div>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>コース名</th>
+                      <th>開始日</th>
+                      <th>終了予定日</th>
+                      <th>進捗</th>
+                      <th>ステータス</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Web開発マスターコース</td>
+                      <td>2024/04/01</td>
+                      <td>2024/09/30</td>
+                      <td>
+                        <div class="flex items-center">
+                          <div style="width: 100px; height: 8px; background: var(--border); border-radius: 4px; margin-right: 0.5rem; overflow: hidden;">
+                            <div style="width: 65%; height: 100%; background: var(--primary);"></div>
+                          </div>
+                          <span style="font-size: 0.75rem;">65%</span>
+                        </div>
+                      </td>
+                      <td><span class="badge badge-success">受講中</span></td>
+                    </tr>
+                    <tr>
+                      <td>JavaScript実践</td>
+                      <td>2024/05/15</td>
+                      <td>2024/07/15</td>
+                      <td>
+                        <div class="flex items-center">
+                          <div style="width: 100px; height: 8px; background: var(--border); border-radius: 4px; margin-right: 0.5rem; overflow: hidden;">
+                            <div style="width: 10%; height: 100%; background: var(--warning);"></div>
+                          </div>
+                          <span style="font-size: 0.75rem;">10%</span>
+                        </div>
+                      </td>
+                      <td><span class="badge badge-success">受講中</span></td>
+                    </tr>
+                    <tr>
+                      <td>HTML/CSS基礎</td>
+                      <td>2023/10/01</td>
+                      <td>2023/12/25</td>
+                      <td>
+                        <div class="flex items-center">
+                          <div style="width: 100px; height: 8px; background: var(--border); border-radius: 4px; margin-right: 0.5rem; overflow: hidden;">
+                            <div style="width: 100%; height: 100%; background: var(--success);"></div>
+                          </div>
+                          <span style="font-size: 0.75rem;">100%</span>
+                        </div>
+                      </td>
+                      <td><span class="badge badge-primary">完了</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h2 class="card-title">最近の成績・提出物</h2>
+              </div>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>課題名</th>
+                      <th>コース</th>
+                      <th>提出日</th>
+                      <th>評価</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>React Componentの作成</td>
+                      <td>Web開発マスターコース</td>
+                      <td>2024/05/20</td>
+                      <td><span style="color: var(--success); font-weight: 600;">A</span> (92/100)</td>
+                    </tr>
+                    <tr>
+                      <td>API通信の実装</td>
+                      <td>Web開発マスターコース</td>
+                      <td>2024/05/10</td>
+                      <td><span style="color: var(--warning); font-weight: 600;">B</span> (78/100)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-body border-t" style="border-top: 1px solid var(--border); text-align: center;">
+                <a href="grades.html" class="btn btn-secondary btn-sm">すべての成績を見る</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>講師一覧 - 受講生管理システム</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app-container" id="app">
+    <main class="main-content" id="main-content">
+      <div class="page-content">
+        <div class="flex justify-between items-center mb-6">
+          <div>
+            <h1 class="page-title">講師一覧</h1>
+            <p class="page-description" style="margin-bottom: 0;">登録されている講師の管理</p>
+          </div>
+          <div>
+            <button class="btn btn-primary" onclick="location.href='instructor_add.html'">
+              <i class="fas fa-plus"></i> 新規登録
+            </button>
+          </div>
+        </div>
+
+        <div class="card mb-6">
+          <div class="card-body">
+            <div class="flex space-x-4">
+              <div class="form-group flex-1" style="margin-bottom: 0;">
+                <input type="text" class="form-control" placeholder="氏名、専門分野で検索...">
+              </div>
+              <div class="form-group" style="margin-bottom: 0; width: 200px;">
+                <select class="form-control">
+                  <option value="">ステータス: すべて</option>
+                  <option value="active">稼働中</option>
+                  <option value="inactive">休職中</option>
+                </select>
+              </div>
+              <button class="btn btn-secondary"><i class="fas fa-search"></i> 検索</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6">
+          <!-- Instructor 1 -->
+          <div class="card text-center" style="padding: 2rem 1.5rem;">
+            <div class="avatar mx-auto mb-4" style="width: 80px; height: 80px; font-size: 2rem; margin: 0 auto 1rem; background-color: #f59e0b;">田</div>
+            <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">田中 健太</h3>
+            <p class="text-muted" style="font-size: 0.875rem; margin-bottom: 1rem;">Webエンジニア</p>
+            <div class="flex justify-center space-x-2 mb-4">
+              <span class="badge" style="background-color: #f3f4f6; color: #4b5563;">JavaScript</span>
+              <span class="badge" style="background-color: #f3f4f6; color: #4b5563;">React</span>
+              <span class="badge" style="background-color: #f3f4f6; color: #4b5563;">Node.js</span>
+            </div>
+            <p style="font-size: 0.875rem; margin-bottom: 1.5rem;">現役のフロントエンドエンジニア。実務に即した実践的なコーディング指導が得意。</p>
+            <div class="flex justify-center space-x-2">
+              <button class="btn btn-secondary btn-sm" onclick="location.href='instructor_detail.html'"><i class="fas fa-user"></i> 詳細</button>
+              <button class="btn btn-secondary btn-sm" onclick="location.href='instructor_edit.html'"><i class="fas fa-edit"></i> 編集</button>
+            </div>
+          </div>
+
+          <!-- Instructor 2 -->
+          <div class="card text-center" style="padding: 2rem 1.5rem;">
+            <div class="avatar mx-auto mb-4" style="width: 80px; height: 80px; font-size: 2rem; margin: 0 auto 1rem; background-color: #ec4899;">佐</div>
+            <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">佐藤 花子</h3>
+            <p class="text-muted" style="font-size: 0.875rem; margin-bottom: 1rem;">データサイエンティスト</p>
+            <div class="flex justify-center space-x-2 mb-4">
+              <span class="badge" style="background-color: #f3f4f6; color: #4b5563;">Python</span>
+              <span class="badge" style="background-color: #f3f4f6; color: #4b5563;">機械学習</span>
+            </div>
+            <p style="font-size: 0.875rem; margin-bottom: 1.5rem;">大手企業でのデータ分析経験を活かし、Pythonを用いたデータ処理をわかりやすく解説。</p>
+            <div class="flex justify-center space-x-2">
+              <button class="btn btn-secondary btn-sm" onclick="location.href='instructor_detail.html'"><i class="fas fa-user"></i> 詳細</button>
+              <button class="btn btn-secondary btn-sm" onclick="location.href='instructor_edit.html'"><i class="fas fa-edit"></i> 編集</button>
+            </div>
+          </div>
+
+          <!-- Instructor 3 -->
+          <div class="card text-center" style="padding: 2rem 1.5rem;">
+            <div class="avatar mx-auto mb-4" style="width: 80px; height: 80px; font-size: 2rem; margin: 0 auto 1rem; background-color: #8b5cf6;">高</div>
+            <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">高橋 一郎</h3>
+            <p class="text-muted" style="font-size: 0.875rem; margin-bottom: 1rem;">UI/UXデザイナー</p>
+            <div class="flex justify-center space-x-2 mb-4">
+              <span class="badge" style="background-color: #f3f4f6; color: #4b5563;">Figma</span>
+              <span class="badge" style="background-color: #f3f4f6; color: #4b5563;">UI設計</span>
+            </div>
+            <p style="font-size: 0.875rem; margin-bottom: 1.5rem;">ユーザー中心設計の第一人者。直感的に理解できるデザイン理論に定評がある。</p>
+            <div class="flex justify-center space-x-2">
+              <button class="btn btn-secondary btn-sm" onclick="location.href='instructor_detail.html'"><i class="fas fa-user"></i> 詳細</button>
+              <button class="btn btn-secondary btn-sm" onclick="location.href='instructor_edit.html'"><i class="fas fa-edit"></i> 編集</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
